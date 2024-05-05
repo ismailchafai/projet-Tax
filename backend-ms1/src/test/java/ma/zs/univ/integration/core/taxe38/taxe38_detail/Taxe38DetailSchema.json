@@ -1,0 +1,19 @@
+{
+    "code": "#string",
+    "montantParMetreCarre": "#number",
+    "locale38Detail": {"id": "#number"},
+    "tauxTaxe38": {"id": "#number"},
+    "taxe38": {"id": "#number"},
+    "montantBase": "#number",
+    "montantRetardPremierMois": "#number",
+    "montantRetardAutreMois": "#number"
+
+}
+
+
+
+
+
+
+
+

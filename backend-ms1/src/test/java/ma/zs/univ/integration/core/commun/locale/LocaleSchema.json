@@ -1,0 +1,16 @@
+{
+    "code": "#string",
+    "complementAdresse": "#string",
+    "rue": {"id": "#number"},
+    "redevable": {"id": "#number"},
+    "categorieLocale": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

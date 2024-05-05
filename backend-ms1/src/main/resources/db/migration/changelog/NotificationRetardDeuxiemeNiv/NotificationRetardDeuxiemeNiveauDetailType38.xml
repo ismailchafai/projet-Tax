@@ -1,0 +1,59 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="notification_retard_deuxieme_niveau_detail_type38">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="code" type="VARCHAR(500)"/>
+        <column name="montant_base" type="NUMERIC"/>
+        <column name="montant_retard_premier_mois" type="NUMERIC"/>
+        <column name="montant_retard_autre_mois" type="NUMERIC"/>
+        <column name="montant_total" type="NUMERIC"/>
+
+        <column name="type_locale38_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="notification_retard_deuxieme_niveau_detail_type38"
+              baseColumnNames="type_locale38_id"
+              referencedTableName="type_locale38"
+              referencedColumnNames="id"
+              constraintName="fk_notification_retard_deuxieme_niveau_detail_type38_type_locale38"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="notification_retard_deuxieme_niveau_detail_type38_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/NotificationRetardDeuxiemeNiv/NotificationRetardDeuxiemeNiveauDetailType38.csv"
+            tableName="notification_retard_deuxieme_niveau_detail_type38">
+      <column name="id" type="NUMERIC"/>
+          <column name="code" type="STRING"/>
+          <column name="montant_base" type="NUMERIC"/>
+          <column name="montant_retard_premier_mois" type="NUMERIC"/>
+          <column name="montant_retard_autre_mois" type="NUMERIC"/>
+          <column name="montant_total" type="NUMERIC"/>
+        <column name="type_locale38" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

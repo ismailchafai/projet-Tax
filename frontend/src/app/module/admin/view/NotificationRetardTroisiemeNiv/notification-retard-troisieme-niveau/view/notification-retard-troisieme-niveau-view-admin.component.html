@@ -1,0 +1,44 @@
+
+<p-dialog [(visible)]="viewDialog" [style]="{width: '70vw'}" header="{{'notificationRetardTroisiemeNiveau.tabPan' | translate}}" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <p-tabView>
+            <p-tabPanel header="{{'notificationRetardTroisiemeNiveau.tabPan' | translate}}">
+                <div class="grid">
+                    <div class="field col-12 md:col-6">
+                        <label for="1">{{'notificationRetardTroisiemeNiveau.code' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'notificationRetardTroisiemeNiveau.code' | translate}}" autofocus  id="1" [ngModel]="item.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="2">{{'notificationRetardTroisiemeNiveau.locale' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'notificationRetardTroisiemeNiveau.locale' | translate}}" autofocus  id="2" [ngModel]="item.locale?.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="3">{{'notificationRetardTroisiemeNiveau.redevable' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'notificationRetardTroisiemeNiveau.redevable' | translate}}" autofocus  id="3" [ngModel]="item.redevable?.id">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="4">{{'notificationRetardTroisiemeNiveau.anne' | translate}}</label>
+                        <p-inputNumber class="mb-2 mr-2" id="4" [disabled]="true" placeholder="{{'notificationRetardTroisiemeNiveau.anne' | translate}}" [ngModel]="item.anne"></p-inputNumber>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="5">{{'notificationRetardTroisiemeNiveau.trim' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'notificationRetardTroisiemeNiveau.trim' | translate}}" autofocus  id="5" [ngModel]="item.trim?.id">
+                    </div>
+                </div>
+            </p-tabPanel>
+
+        </p-tabView>
+
+    </ng-template>
+
+    <ng-template pTemplate="footer" >
+        <div class="p-flexbox">
+            <div>
+                <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideViewDialog()"></button>
+            </div>
+        </div>
+    </ng-template>
+</p-dialog>
+
+
+

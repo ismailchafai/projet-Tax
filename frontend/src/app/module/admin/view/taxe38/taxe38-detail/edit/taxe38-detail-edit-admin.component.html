@@ -1,0 +1,87 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'taxe38Detail.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'taxe38Detail.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'taxe38Detail.code' | translate}}<span style="color: red;">*</span></label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'taxe38Detail.code' | translate}}" id="1" [(ngModel)]="item.code"
+                                                   [ngClass]="{'ng-invalid ng-dirty' : !validTaxe38DetailCode}"  />
+                                            <small class='p-error' *ngIf='!validTaxe38DetailCode'>Code est obligatoire.</small>
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="2">{{'taxe38Detail.montantParMetreCarre' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'taxe38Detail.montantParMetreCarre' | translate}}" [(ngModel)]="item.montantParMetreCarre"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="3">{{'taxe38Detail.locale38Detail' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="locale38Details" [(ngModel)]="item.locale38Detail" id="3" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'taxe38Detail.locale38Detail' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="4">{{'taxe38Detail.tauxTaxe38' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="tauxTaxe38s" [(ngModel)]="item.tauxTaxe38" id="4" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'taxe38Detail.tauxTaxe38' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="5">{{'taxe38Detail.taxe38' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="taxe38s" [(ngModel)]="item.taxe38" id="5" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'taxe38Detail.taxe38' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="6">{{'taxe38Detail.montantBase' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="6" placeholder="{{'taxe38Detail.montantBase' | translate}}" [(ngModel)]="item.montantBase"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="7">{{'taxe38Detail.montantRetardPremierMois' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="7" placeholder="{{'taxe38Detail.montantRetardPremierMois' | translate}}" [(ngModel)]="item.montantRetardPremierMois"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="8">{{'taxe38Detail.montantRetardAutreMois' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="8" placeholder="{{'taxe38Detail.montantRetardAutreMois' | translate}}" [(ngModel)]="item.montantRetardAutreMois"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

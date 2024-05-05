@@ -1,0 +1,73 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="locale">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="code" type="VARCHAR(500)"/>
+        <column name="complement_adresse" type="VARCHAR(500)"/>
+
+        <column name="rue_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="redevable_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="categorie_locale_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="locale"
+              baseColumnNames="rue_id"
+              referencedTableName="rue"
+              referencedColumnNames="id"
+              constraintName="fk_locale_rue"/>
+      <addForeignKeyConstraint
+              baseTableName="locale"
+              baseColumnNames="redevable_id"
+              referencedTableName="redevable"
+              referencedColumnNames="id"
+              constraintName="fk_locale_redevable"/>
+      <addForeignKeyConstraint
+              baseTableName="locale"
+              baseColumnNames="categorie_locale_id"
+              referencedTableName="categorie_locale"
+              referencedColumnNames="id"
+              constraintName="fk_locale_categorie_locale"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="locale_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/commun/Locale.csv"
+            tableName="locale">
+      <column name="id" type="NUMERIC"/>
+          <column name="code" type="STRING"/>
+          <column name="complement_adresse" type="STRING"/>
+        <column name="rue" type="BIGINT"/>
+        <column name="redevable" type="BIGINT"/>
+        <column name="categorie_locale" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

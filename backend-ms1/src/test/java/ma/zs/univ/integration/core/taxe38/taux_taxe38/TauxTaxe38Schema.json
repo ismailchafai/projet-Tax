@@ -1,0 +1,17 @@
+{
+    "code": "#string",
+    "montantParMetreCarre": "#number",
+    "pourcentagePremierRetard": "#number",
+    "pourcentageAutreMoisRetard": "#number",
+    "typeLocale38Detail": {"id": "#number"},
+    "categorieLocale": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

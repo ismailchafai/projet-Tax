@@ -1,0 +1,48 @@
+
+<p-dialog [(visible)]="viewDialog" [style]="{width: '70vw'}" header="{{'notificationRetardDeuxiemeNiveauDetailType38.tabPan' | translate}}" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <p-tabView>
+            <p-tabPanel header="{{'notificationRetardDeuxiemeNiveauDetailType38.tabPan' | translate}}">
+                <div class="grid">
+                    <div class="field col-12 md:col-6">
+                        <label for="1">{{'notificationRetardDeuxiemeNiveauDetailType38.code' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'notificationRetardDeuxiemeNiveauDetailType38.code' | translate}}" autofocus  id="1" [ngModel]="item.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="2">{{'notificationRetardDeuxiemeNiveauDetailType38.typeLocale38' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'notificationRetardDeuxiemeNiveauDetailType38.typeLocale38' | translate}}" autofocus  id="2" [ngModel]="item.typeLocale38?.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="3">{{'notificationRetardDeuxiemeNiveauDetailType38.montantBase' | translate}}</label>
+                        <p-inputNumber class="mb-2 mr-2" id="3" [disabled]="true" placeholder="{{'notificationRetardDeuxiemeNiveauDetailType38.montantBase' | translate}}" [ngModel]="item.montantBase"></p-inputNumber>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="4">{{'notificationRetardDeuxiemeNiveauDetailType38.montantRetardPremierMois' | translate}}</label>
+                        <p-inputNumber class="mb-2 mr-2" id="4" [disabled]="true" placeholder="{{'notificationRetardDeuxiemeNiveauDetailType38.montantRetardPremierMois' | translate}}" [ngModel]="item.montantRetardPremierMois"></p-inputNumber>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="5">{{'notificationRetardDeuxiemeNiveauDetailType38.montantRetardAutreMois' | translate}}</label>
+                        <p-inputNumber class="mb-2 mr-2" id="5" [disabled]="true" placeholder="{{'notificationRetardDeuxiemeNiveauDetailType38.montantRetardAutreMois' | translate}}" [ngModel]="item.montantRetardAutreMois"></p-inputNumber>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="6">{{'notificationRetardDeuxiemeNiveauDetailType38.montantTotal' | translate}}</label>
+                        <p-inputNumber class="mb-2 mr-2" id="6" [disabled]="true" placeholder="{{'notificationRetardDeuxiemeNiveauDetailType38.montantTotal' | translate}}" [ngModel]="item.montantTotal"></p-inputNumber>
+                    </div>
+                </div>
+            </p-tabPanel>
+
+        </p-tabView>
+
+    </ng-template>
+
+    <ng-template pTemplate="footer" >
+        <div class="p-flexbox">
+            <div>
+                <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideViewDialog()"></button>
+            </div>
+        </div>
+    </ng-template>
+</p-dialog>
+
+
+

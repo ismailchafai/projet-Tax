@@ -1,0 +1,83 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="taxe38">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="code" type="VARCHAR(500)"/>
+        <column name="anne" type="BIGINT"/>
+        <column name="date_presentaion" type="TIMESTAMP"/>
+        <column name="nombre_mois_retard" type="BIGINT"/>
+        <column name="montant_base" type="NUMERIC"/>
+        <column name="montant_retard_premeir_mois" type="NUMERIC"/>
+        <column name="montant_total" type="NUMERIC"/>
+
+        <column name="redevable_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="locale_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="trim_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="taxe38"
+              baseColumnNames="redevable_id"
+              referencedTableName="redevable"
+              referencedColumnNames="id"
+              constraintName="fk_taxe38_redevable"/>
+      <addForeignKeyConstraint
+              baseTableName="taxe38"
+              baseColumnNames="locale_id"
+              referencedTableName="locale"
+              referencedColumnNames="id"
+              constraintName="fk_taxe38_locale"/>
+      <addForeignKeyConstraint
+              baseTableName="taxe38"
+              baseColumnNames="trim_id"
+              referencedTableName="trim"
+              referencedColumnNames="id"
+              constraintName="fk_taxe38_trim"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="taxe38_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/taxe38/Taxe38.csv"
+            tableName="taxe38">
+      <column name="id" type="NUMERIC"/>
+          <column name="code" type="STRING"/>
+          <column name="anne" type="NUMERIC"/>
+          <column name="date_presentaion" type="TIMESTAMP"/>
+          <column name="nombre_mois_retard" type="NUMERIC"/>
+          <column name="montant_base" type="NUMERIC"/>
+          <column name="montant_retard_premeir_mois" type="NUMERIC"/>
+          <column name="montant_total" type="NUMERIC"/>
+        <column name="redevable" type="BIGINT"/>
+        <column name="locale" type="BIGINT"/>
+        <column name="trim" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

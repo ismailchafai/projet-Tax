@@ -1,0 +1,79 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="taxe38_detail">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="code" type="VARCHAR(500)"/>
+        <column name="montant_par_metre_carre" type="NUMERIC"/>
+        <column name="montant_base" type="NUMERIC"/>
+        <column name="montant_retard_premier_mois" type="NUMERIC"/>
+        <column name="montant_retard_autre_mois" type="NUMERIC"/>
+
+        <column name="locale38_detail_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="taux_taxe38_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="taxe38_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="taxe38_detail"
+              baseColumnNames="locale38_detail_id"
+              referencedTableName="locale38_detail"
+              referencedColumnNames="id"
+              constraintName="fk_taxe38_detail_locale38_detail"/>
+      <addForeignKeyConstraint
+              baseTableName="taxe38_detail"
+              baseColumnNames="taux_taxe38_id"
+              referencedTableName="taux_taxe38"
+              referencedColumnNames="id"
+              constraintName="fk_taxe38_detail_taux_taxe38"/>
+      <addForeignKeyConstraint
+              baseTableName="taxe38_detail"
+              baseColumnNames="taxe38_id"
+              referencedTableName="taxe38"
+              referencedColumnNames="id"
+              constraintName="fk_taxe38_detail_taxe38"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="taxe38_detail_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/taxe38/Taxe38Detail.csv"
+            tableName="taxe38_detail">
+      <column name="id" type="NUMERIC"/>
+          <column name="code" type="STRING"/>
+          <column name="montant_par_metre_carre" type="NUMERIC"/>
+          <column name="montant_base" type="NUMERIC"/>
+          <column name="montant_retard_premier_mois" type="NUMERIC"/>
+          <column name="montant_retard_autre_mois" type="NUMERIC"/>
+        <column name="locale38_detail" type="BIGINT"/>
+        <column name="taux_taxe38" type="BIGINT"/>
+        <column name="taxe38" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

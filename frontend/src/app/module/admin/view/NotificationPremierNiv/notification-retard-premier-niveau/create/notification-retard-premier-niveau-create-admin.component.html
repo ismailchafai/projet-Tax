@@ -1,0 +1,65 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'notificationRetardPremierNiveau.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'notificationRetardPremierNiveau.tabPan' | translate}}">
+                                <div class="grid">
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="1">{{'notificationRetardPremierNiveau.code' | translate}}<span style="color: red;">*</span></label>
+                                                    <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'notificationRetardPremierNiveau.code' | translate}}" id="1" [(ngModel)]="item.code"
+                                                            [ngClass]="{'ng-invalid ng-dirty' : !validNotificationRetardPremierNiveauCode}"  />
+                                                    <small class='p-error' *ngIf='!validNotificationRetardPremierNiveauCode'>Code est obligatoire.</small>
+                                                </div>
+
+
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="2">{{'notificationRetardPremierNiveau.locale' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="locales" [(ngModel)]="item.locale" id="2" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="code" placeholder="{{'notificationRetardPremierNiveau.locale' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="3">{{'notificationRetardPremierNiveau.redevable' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="redevables" [(ngModel)]="item.redevable" id="3" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="id" placeholder="{{'notificationRetardPremierNiveau.redevable' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="4">{{'notificationRetardPremierNiveau.anne' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="4" placeholder="{{'notificationRetardPremierNiveau.anne' | translate}}" [(ngModel)]="item.anne"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="5">{{'notificationRetardPremierNiveau.montantBase' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="5" placeholder="{{'notificationRetardPremierNiveau.montantBase' | translate}}" [(ngModel)]="item.montantBase"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                </div>
+                            </p-tabPanel>
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

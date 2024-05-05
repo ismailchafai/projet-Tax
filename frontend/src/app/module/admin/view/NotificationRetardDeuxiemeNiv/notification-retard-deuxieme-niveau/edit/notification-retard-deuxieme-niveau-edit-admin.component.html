@@ -1,0 +1,86 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'notificationRetardDeuxiemeNiveau.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'notificationRetardDeuxiemeNiveau.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'notificationRetardDeuxiemeNiveau.code' | translate}}<span style="color: red;">*</span></label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'notificationRetardDeuxiemeNiveau.code' | translate}}" id="1" [(ngModel)]="item.code"
+                                                   [ngClass]="{'ng-invalid ng-dirty' : !validNotificationRetardDeuxiemeNiveauCode}"  />
+                                            <small class='p-error' *ngIf='!validNotificationRetardDeuxiemeNiveauCode'>Code est obligatoire.</small>
+                                        </div>
+
+
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="2">{{'notificationRetardDeuxiemeNiveau.locale' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="locales" [(ngModel)]="item.locale" id="2" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'notificationRetardDeuxiemeNiveau.locale' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="3">{{'notificationRetardDeuxiemeNiveau.redevable' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="redevables" [(ngModel)]="item.redevable" id="3" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="id" placeholder="{{'notificationRetardDeuxiemeNiveau.redevable' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="4">{{'notificationRetardDeuxiemeNiveau.anne' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="4" placeholder="{{'notificationRetardDeuxiemeNiveau.anne' | translate}}" [(ngModel)]="item.anne"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="5">{{'notificationRetardDeuxiemeNiveau.montantBase' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="5" placeholder="{{'notificationRetardDeuxiemeNiveau.montantBase' | translate}}" [(ngModel)]="item.montantBase"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="6">{{'notificationRetardDeuxiemeNiveau.montantRetardPremierMois' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="6" placeholder="{{'notificationRetardDeuxiemeNiveau.montantRetardPremierMois' | translate}}" [(ngModel)]="item.montantRetardPremierMois"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="7">{{'notificationRetardDeuxiemeNiveau.montantRetardAutreMois' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="7" placeholder="{{'notificationRetardDeuxiemeNiveau.montantRetardAutreMois' | translate}}" [(ngModel)]="item.montantRetardAutreMois"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="8">{{'notificationRetardDeuxiemeNiveau.montantTotal' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="8" placeholder="{{'notificationRetardDeuxiemeNiveau.montantTotal' | translate}}" [(ngModel)]="item.montantTotal"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

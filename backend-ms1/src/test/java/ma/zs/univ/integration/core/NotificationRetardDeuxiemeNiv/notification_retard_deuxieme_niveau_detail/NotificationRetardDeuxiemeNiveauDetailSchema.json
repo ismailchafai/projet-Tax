@@ -1,0 +1,17 @@
+{
+    "code": "#string",
+    "trim": {"id": "#number"},
+    "montantBase": "#number",
+    "montantRetardPremierMois": "#number",
+    "montantRetardAutreMois": "#number",
+    "montantTotal": "#number"
+
+}
+
+
+
+
+
+
+
+

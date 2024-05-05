@@ -1,0 +1,25 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/taxe38/Trim.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38/CategorieLocale.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38/TypeLocale38Detail.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Rue.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Ville.xml"/>
+        <include file="classpath:db/migration/changelog/NotificationRetardDeuxiemeNiv/NotificationRetardDeuxiemeNiveau.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38/Locale38Detail.xml"/>
+        <include file="classpath:db/migration/changelog/NotificationRetardDeuxiemeNiv/NotificationRetardDeuxiemeNiveauDetail.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Secteur.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38/Taxe38Detail.xml"/>
+        <include file="classpath:db/migration/changelog/NotificationPremierNiv/NotificationRetardPremierNiveau.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Locale.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Redevable.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38/Taxe38.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38/TauxTaxe38.xml"/>
+        <include file="classpath:db/migration/changelog/NotificationRetardDeuxiemeNiv/NotificationRetardDeuxiemeNiveauDetailType38.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Quartier.xml"/>
+        <include file="classpath:db/migration/changelog/NotificationRetardTroisiemeNiv/NotificationRetardTroisiemeNiveau.xml"/>
+
+</databaseChangeLog>

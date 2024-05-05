@@ -1,0 +1,471 @@
+{
+    "from-to": "العناصر من {first} إلى {last} (الإجمالي {totalRecords})",
+    "new": "جديد",
+    "search": "بحث",
+    "export": "تصدير",
+    "validate": "التحقق",
+    "search": "البحث...",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "next": "التالي",
+    "yes": "نعم",
+    "no": "لا",
+    "actions": "الإجراءات",
+    "confirm": "تأكيد",
+    "creation": "إنشاء",
+    "list": "قائمة",
+
+    "actionPermission": {
+        "reference": "المرجع",
+        "libelle": "التسمية",
+        "actionPermission": "إذن الإجراء",
+        "tabPan": "إذن الإجراء",
+        "header": "قائمة أذونات الإجراءات",
+        "deleteActionPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن الإجراء؟",
+        "deleteActionPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "modelPermissionUser": {
+        "actionPermission": "إذن الإجراء",
+        "actionPermissionPlaceHolder": "اختر إذن الإجراء",
+        "actionPermissionPlaceHolderFilter": "البحث حسب إذن الإجراء",
+        "modelPermission": "إذن النموذج",
+        "modelPermissionPlaceHolder": "اختر إذن النموذج",
+        "modelPermissionPlaceHolderFilter": "البحث حسب إذن النموذج",
+        "value": "القيمة",
+        "user": "المستخدم",
+        "userPlaceHolder": "اختر مستخدمًا",
+        "userPlaceHolderFilter": "البحث حسب المستخدم",
+        "subAttribute": "السمة الفرعية",
+        "modelPermissionUser": "إذن مستخدم النموذج",
+        "tabPan": "إذن مستخدم النموذج",
+        "header": "قائمة مستخدمي إذن النموذج",
+        "deleteModelPermissionUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم إذن النموذج؟",
+        "deleteModelPermissionUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "role": {
+        "authority": "السلطة",
+        "role": "الدور",
+        "tabPan": "الدور",
+        "header": "قائمة الأدوار",
+        "deleteRoleConfirmationMessage": "هل أنت متأكد أنك تريد حذف الدور؟",
+        "deleteRolesConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "roleUser": {
+        "role": "الدور",
+        "rolePlaceHolder": "اختر دورًا",
+        "rolePlaceHolderFilter": "البحث حسب الدور",
+        "user": "المستخدم",
+        "userPlaceHolder": "اختر مستخدمًا",
+        "userPlaceHolderFilter": "البحث حسب المستخدم",
+        "roleUser": "دور المستخدم",
+        "tabPan": "دور المستخدم",
+        "header": "قائمة مستخدمي الدور",
+        "deleteRoleUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم الدور؟",
+        "deleteRoleUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "user": {
+        "credentialsNonExpired": "صلاحية الاعتماد غير منتهية",
+        "enabled": "مفعل",
+        "email": "البريد الإلكتروني",
+        "accountNonExpired": "الحساب غير منتهي",
+        "accountNonLocked": "الحساب غير مقفل",
+        "username": "اسم المستخدم",
+        "password": "كلمة المرور",
+        "passwordChanged": "تم تغيير كلمة المرور",
+        "modelPermissionUsers": "مستخدمو إذن النموذج",
+        "roleUsers": "مستخدمو الدور",
+        "RoleUsersPlaceHolder": "حدد عدة أدوار",
+        "user": "المستخدم",
+        "tabPan": "المستخدم",
+        "header": "قائمة المستخدمين",
+        "deleteUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف المستخدم؟",
+        "deleteUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+	"modelPermission": {
+		"reference": "المرجع",
+		"libelle": "التسمية",
+		"modelPermission": "إذن النموذج",
+		"tabPan": "إذن النموذج",
+		"header": "قائمة أذونات النماذج",
+		"deleteModelPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن النموذج؟",
+		"deleteModelPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+	}
+
+
+
+    "trim":{
+        "libelle": "Libelle",
+        "numero": "Numero",
+        "numeroMin": "Numero Min",
+        "numeroMax": "Numero Max",
+        "trim": "Trim",
+        "tabPan": "Trim",
+        "header": "Liste des trims",
+        "deleteTrimConfirmationMessage": "Are you sure you want to delete trim",
+        "deleteTrimsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "categorieLocale":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "categorieLocale": "Categorie locale",
+        "tabPan": "Categorie locale",
+        "header": "Liste des categorie locales",
+        "deleteCategorieLocaleConfirmationMessage": "Are you sure you want to delete categorie locale",
+        "deleteCategorieLocalesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "typeLocale38Detail":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "typeLocale38Detail": "Type locale38 detail",
+        "tabPan": "Type locale38 detail",
+        "header": "Liste des type locale38 details",
+        "deleteTypeLocale38DetailConfirmationMessage": "Are you sure you want to delete type locale38 detail",
+        "deleteTypeLocale38DetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "rue":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "quartier": "Quartier",
+        "quartierPlaceHolder": "Select a Quartier",
+        "quartierPlaceHolderFilter": "Search by Quartier",
+        "rue": "Rue",
+        "tabPan": "Rue",
+        "header": "Liste des rues",
+        "deleteRueConfirmationMessage": "Are you sure you want to delete rue",
+        "deleteRuesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "ville":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "ville": "Ville",
+        "tabPan": "Ville",
+        "header": "Liste des villes",
+        "deleteVilleConfirmationMessage": "Are you sure you want to delete ville",
+        "deleteVillesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "notificationRetardDeuxiemeNiveau":{
+        "code": "Code",
+        "locale": "Locale",
+        "localePlaceHolder": "Select a Locale",
+        "localePlaceHolderFilter": "Search by Locale",
+        "redevable": "Redevable",
+        "redevablePlaceHolder": "Select a Redevable",
+        "redevablePlaceHolderFilter": "Search by Redevable",
+        "anne": "Anne",
+        "anneMin": "Anne Min",
+        "anneMax": "Anne Max",
+        "montantBase": "Montant base",
+        "montantBaseMin": "Montant base Min",
+        "montantBaseMax": "Montant base Max",
+        "montantRetardPremierMois": "Montant retard premier mois",
+        "montantRetardPremierMoisMin": "Montant retard premier mois Min",
+        "montantRetardPremierMoisMax": "Montant retard premier mois Max",
+        "montantRetardAutreMois": "Montant retard autre mois",
+        "montantRetardAutreMoisMin": "Montant retard autre mois Min",
+        "montantRetardAutreMoisMax": "Montant retard autre mois Max",
+        "montantTotal": "Montant total",
+        "montantTotalMin": "Montant total Min",
+        "montantTotalMax": "Montant total Max",
+        "notificationRetardDeuxiemeNiveau": "Notification retard deuxieme niveau",
+        "tabPan": "Notification retard deuxieme niveau",
+        "header": "Liste des notification retard deuxieme niveaus",
+        "deleteNotificationRetardDeuxiemeNiveauConfirmationMessage": "Are you sure you want to delete notification retard deuxieme niveau",
+        "deleteNotificationRetardDeuxiemeNiveausConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "locale38Detail":{
+        "code": "Code",
+        "superficie": "Superficie",
+        "superficieMin": "Superficie Min",
+        "superficieMax": "Superficie Max",
+        "typeLocale38Detail": "Type locale38 detail",
+        "typeLocale38DetailPlaceHolder": "Select a Type locale38 detail",
+        "typeLocale38DetailPlaceHolderFilter": "Search by Type locale38 detail",
+        "active": "Active",
+        "locale38Detail": "Locale38 detail",
+        "tabPan": "Locale38 detail",
+        "header": "Liste des locale38 details",
+        "deleteLocale38DetailConfirmationMessage": "Are you sure you want to delete locale38 detail",
+        "deleteLocale38DetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "notificationRetardDeuxiemeNiveauDetail":{
+        "code": "Code",
+        "trim": "Trim",
+        "trimPlaceHolder": "Select a Trim",
+        "trimPlaceHolderFilter": "Search by Trim",
+        "montantBase": "Montant base",
+        "montantBaseMin": "Montant base Min",
+        "montantBaseMax": "Montant base Max",
+        "montantRetardPremierMois": "Montant retard premier mois",
+        "montantRetardPremierMoisMin": "Montant retard premier mois Min",
+        "montantRetardPremierMoisMax": "Montant retard premier mois Max",
+        "montantRetardAutreMois": "Montant retard autre mois",
+        "montantRetardAutreMoisMin": "Montant retard autre mois Min",
+        "montantRetardAutreMoisMax": "Montant retard autre mois Max",
+        "montantTotal": "Montant total",
+        "montantTotalMin": "Montant total Min",
+        "montantTotalMax": "Montant total Max",
+        "notificationRetardDeuxiemeNiveauDetail": "Notification retard deuxieme niveau detail",
+        "tabPan": "Notification retard deuxieme niveau detail",
+        "header": "Liste des notification retard deuxieme niveau details",
+        "deleteNotificationRetardDeuxiemeNiveauDetailConfirmationMessage": "Are you sure you want to delete notification retard deuxieme niveau detail",
+        "deleteNotificationRetardDeuxiemeNiveauDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "secteur":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "ville": "Ville",
+        "villePlaceHolder": "Select a Ville",
+        "villePlaceHolderFilter": "Search by Ville",
+        "secteur": "Secteur",
+        "tabPan": "Secteur",
+        "header": "Liste des secteurs",
+        "deleteSecteurConfirmationMessage": "Are you sure you want to delete secteur",
+        "deleteSecteursConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "taxe38Detail":{
+        "code": "Code",
+        "montantParMetreCarre": "Montant par metre carre",
+        "montantParMetreCarreMin": "Montant par metre carre Min",
+        "montantParMetreCarreMax": "Montant par metre carre Max",
+        "locale38Detail": "Locale38 detail",
+        "locale38DetailPlaceHolder": "Select a Locale38 detail",
+        "locale38DetailPlaceHolderFilter": "Search by Locale38 detail",
+        "tauxTaxe38": "Taux taxe38",
+        "tauxTaxe38PlaceHolder": "Select a Taux taxe38",
+        "tauxTaxe38PlaceHolderFilter": "Search by Taux taxe38",
+        "taxe38": "Taxe38",
+        "taxe38PlaceHolder": "Select a Taxe38",
+        "taxe38PlaceHolderFilter": "Search by Taxe38",
+        "montantBase": "Montant base",
+        "montantBaseMin": "Montant base Min",
+        "montantBaseMax": "Montant base Max",
+        "montantRetardPremierMois": "Montant retard premier mois",
+        "montantRetardPremierMoisMin": "Montant retard premier mois Min",
+        "montantRetardPremierMoisMax": "Montant retard premier mois Max",
+        "montantRetardAutreMois": "Montant retard autre mois",
+        "montantRetardAutreMoisMin": "Montant retard autre mois Min",
+        "montantRetardAutreMoisMax": "Montant retard autre mois Max",
+        "taxe38Detail": "Taxe38 detail",
+        "tabPan": "Taxe38 detail",
+        "header": "Liste des taxe38 details",
+        "deleteTaxe38DetailConfirmationMessage": "Are you sure you want to delete taxe38 detail",
+        "deleteTaxe38DetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "notificationRetardPremierNiveau":{
+        "code": "Code",
+        "locale": "Locale",
+        "localePlaceHolder": "Select a Locale",
+        "localePlaceHolderFilter": "Search by Locale",
+        "redevable": "Redevable",
+        "redevablePlaceHolder": "Select a Redevable",
+        "redevablePlaceHolderFilter": "Search by Redevable",
+        "anne": "Anne",
+        "anneMin": "Anne Min",
+        "anneMax": "Anne Max",
+        "montantBase": "Montant base",
+        "montantBaseMin": "Montant base Min",
+        "montantBaseMax": "Montant base Max",
+        "notificationRetardPremierNiveau": "Notification retard premier niveau",
+        "tabPan": "Notification retard premier niveau",
+        "header": "Liste des notification retard premier niveaus",
+        "deleteNotificationRetardPremierNiveauConfirmationMessage": "Are you sure you want to delete notification retard premier niveau",
+        "deleteNotificationRetardPremierNiveausConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "locale":{
+        "code": "Code",
+        "complementAdresse": "Complement adresse",
+        "rue": "Rue",
+        "ruePlaceHolder": "Select a Rue",
+        "ruePlaceHolderFilter": "Search by Rue",
+        "redevable": "Redevable",
+        "redevablePlaceHolder": "Select a Redevable",
+        "redevablePlaceHolderFilter": "Search by Redevable",
+        "categorieLocale": "Categorie locale",
+        "categorieLocalePlaceHolder": "Select a Categorie locale",
+        "categorieLocalePlaceHolderFilter": "Search by Categorie locale",
+        "locale": "Locale",
+        "tabPan": "Locale",
+        "header": "Liste des locales",
+        "deleteLocaleConfirmationMessage": "Are you sure you want to delete locale",
+        "deleteLocalesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "redevable":{
+        "cin": "Cin",
+        "credentialsNonExpired": "Credentials non expired",
+        "enabled": "Enabled",
+        "accountNonExpired": "Account non expired",
+        "accountNonLocked": "Account non locked",
+        "passwordChanged": "Password changed",
+        "username": "Username",
+        "password": "Password",
+        "redevable": "Redevable",
+        "tabPan": "Redevable",
+        "header": "Liste des redevables",
+        "deleteRedevableConfirmationMessage": "Are you sure you want to delete redevable",
+        "deleteRedevablesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "taxe38":{
+        "code": "Code",
+        "redevable": "Redevable",
+        "redevablePlaceHolder": "Select a Redevable",
+        "redevablePlaceHolderFilter": "Search by Redevable",
+        "locale": "Locale",
+        "localePlaceHolder": "Select a Locale",
+        "localePlaceHolderFilter": "Search by Locale",
+        "anne": "Anne",
+        "anneMin": "Anne Min",
+        "anneMax": "Anne Max",
+        "trim": "Trim",
+        "trimPlaceHolder": "Select a Trim",
+        "trimPlaceHolderFilter": "Search by Trim",
+        "datePresentaion": "Date presentaion",
+        "datePresentaionMin": "Date presentaion Min",
+        "datePresentaionMax": "Date presentaion Max",
+        "nombreMoisRetard": "Nombre mois retard",
+        "nombreMoisRetardMin": "Nombre mois retard Min",
+        "nombreMoisRetardMax": "Nombre mois retard Max",
+        "montantBase": "Montant base",
+        "montantBaseMin": "Montant base Min",
+        "montantBaseMax": "Montant base Max",
+        "montantRetardPremeirMois": "Montant retard premeir mois",
+        "montantRetardPremeirMoisMin": "Montant retard premeir mois Min",
+        "montantRetardPremeirMoisMax": "Montant retard premeir mois Max",
+        "montantTotal": "Montant total",
+        "montantTotalMin": "Montant total Min",
+        "montantTotalMax": "Montant total Max",
+        "taxe38Details": "Taxe38 details",
+        "taxe38": "Taxe38",
+        "tabPan": "Taxe38",
+        "header": "Liste des taxe38s",
+        "deleteTaxe38ConfirmationMessage": "Are you sure you want to delete taxe38",
+        "deleteTaxe38sConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "tauxTaxe38":{
+        "code": "Code",
+        "montantParMetreCarre": "Montant par metre carre",
+        "montantParMetreCarreMin": "Montant par metre carre Min",
+        "montantParMetreCarreMax": "Montant par metre carre Max",
+        "dateMin": "Date min",
+        "dateMinMin": "Date min Min",
+        "dateMinMax": "Date min Max",
+        "dateMax": "Date max",
+        "dateMaxMin": "Date max Min",
+        "dateMaxMax": "Date max Max",
+        "pourcentagePremierRetard": "Pourcentage premier retard",
+        "pourcentagePremierRetardMin": "Pourcentage premier retard Min",
+        "pourcentagePremierRetardMax": "Pourcentage premier retard Max",
+        "pourcentageAutreMoisRetard": "Pourcentage autre mois retard",
+        "pourcentageAutreMoisRetardMin": "Pourcentage autre mois retard Min",
+        "pourcentageAutreMoisRetardMax": "Pourcentage autre mois retard Max",
+        "typeLocale38Detail": "Type locale38 detail",
+        "typeLocale38DetailPlaceHolder": "Select a Type locale38 detail",
+        "typeLocale38DetailPlaceHolderFilter": "Search by Type locale38 detail",
+        "categorieLocale": "Categorie locale",
+        "categorieLocalePlaceHolder": "Select a Categorie locale",
+        "categorieLocalePlaceHolderFilter": "Search by Categorie locale",
+        "tauxTaxe38": "Taux taxe38",
+        "tabPan": "Taux taxe38",
+        "header": "Liste des taux taxe38s",
+        "deleteTauxTaxe38ConfirmationMessage": "Are you sure you want to delete taux taxe38",
+        "deleteTauxTaxe38sConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "notificationRetardDeuxiemeNiveauDetailType38":{
+        "code": "Code",
+        "typeLocale38": "Type locale38",
+        "typeLocale38PlaceHolder": "Select a Type locale38",
+        "typeLocale38PlaceHolderFilter": "Search by Type locale38",
+        "montantBase": "Montant base",
+        "montantBaseMin": "Montant base Min",
+        "montantBaseMax": "Montant base Max",
+        "montantRetardPremierMois": "Montant retard premier mois",
+        "montantRetardPremierMoisMin": "Montant retard premier mois Min",
+        "montantRetardPremierMoisMax": "Montant retard premier mois Max",
+        "montantRetardAutreMois": "Montant retard autre mois",
+        "montantRetardAutreMoisMin": "Montant retard autre mois Min",
+        "montantRetardAutreMoisMax": "Montant retard autre mois Max",
+        "montantTotal": "Montant total",
+        "montantTotalMin": "Montant total Min",
+        "montantTotalMax": "Montant total Max",
+        "notificationRetardDeuxiemeNiveauDetailType38": "Notification retard deuxieme niveau detail type38",
+        "tabPan": "Notification retard deuxieme niveau detail type38",
+        "header": "Liste des notification retard deuxieme niveau detail type38s",
+        "deleteNotificationRetardDeuxiemeNiveauDetailType38ConfirmationMessage": "Are you sure you want to delete notification retard deuxieme niveau detail type38",
+        "deleteNotificationRetardDeuxiemeNiveauDetailType38sConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "quartier":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "secteur": "Secteur",
+        "secteurPlaceHolder": "Select a Secteur",
+        "secteurPlaceHolderFilter": "Search by Secteur",
+        "quartier": "Quartier",
+        "tabPan": "Quartier",
+        "header": "Liste des quartiers",
+        "deleteQuartierConfirmationMessage": "Are you sure you want to delete quartier",
+        "deleteQuartiersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "notificationRetardTroisiemeNiveau":{
+        "code": "Code",
+        "locale": "Locale",
+        "localePlaceHolder": "Select a Locale",
+        "localePlaceHolderFilter": "Search by Locale",
+        "redevable": "Redevable",
+        "redevablePlaceHolder": "Select a Redevable",
+        "redevablePlaceHolderFilter": "Search by Redevable",
+        "anne": "Anne",
+        "anneMin": "Anne Min",
+        "anneMax": "Anne Max",
+        "trim": "Trim",
+        "trimPlaceHolder": "Select a Trim",
+        "trimPlaceHolderFilter": "Search by Trim",
+        "notificationRetardTroisiemeNiveau": "Notification retard troisieme niveau",
+        "tabPan": "Notification retard troisieme niveau",
+        "header": "Liste des notification retard troisieme niveaus",
+        "deleteNotificationRetardTroisiemeNiveauConfirmationMessage": "Are you sure you want to delete notification retard troisieme niveau",
+        "deleteNotificationRetardTroisiemeNiveausConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+

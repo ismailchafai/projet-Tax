@@ -1,0 +1,49 @@
+{
+    "code": "code-1",
+    "redevable": {"id": "1"},
+    "locale": {"id": "1"},
+    "anne": "10",
+    "trim": {"id": "1"},
+    "nombreMoisRetard": "10",
+    "montantBase": "10",
+    "montantRetardPremeirMois": "10",
+    "montantTotal": "10",
+
+    "taxe38Details": [
+        {
+            "code":"code-1",
+            "montantParMetreCarre":"10",
+            "locale38Detail":{"id": "1"},
+            "tauxTaxe38":{"id": "1"},
+            "montantBase":"10",
+            "montantRetardPremierMois":"10",
+            "montantRetardAutreMois":"10"
+        },
+        {
+            "code":"code-2",
+            "montantParMetreCarre":"20",
+            "locale38Detail":{"id": "2"},
+            "tauxTaxe38":{"id": "2"},
+            "montantBase":"20",
+            "montantRetardPremierMois":"20",
+            "montantRetardAutreMois":"20"
+        },
+        {
+            "code":"code-3",
+            "montantParMetreCarre":"30",
+            "locale38Detail":{"id": "3"},
+            "tauxTaxe38":{"id": "3"},
+            "montantBase":"30",
+            "montantRetardPremierMois":"30",
+            "montantRetardAutreMois":"30"
+        }
+    ]
+}
+
+
+
+
+
+
+
+

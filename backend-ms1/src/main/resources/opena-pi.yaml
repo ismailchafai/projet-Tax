@@ -1,0 +1,1482 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /trims:
+    get:
+      summary: List all trims
+      operationId: listTrims
+      tags:
+        - trims
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of trims
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Trims'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a trim
+      operationId: createTrims
+      tags:
+        - trims
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /trims/{trimId}:
+    get:
+      summary: Info for a specific trim
+      operationId: showTrimById
+      tags:
+        - trims
+      parameters:
+        - name: trimId
+          in: path
+          required: true
+          description: The id of the trim to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Trims'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieLocales:
+    get:
+      summary: List all categorieLocales
+      operationId: listCategorieLocales
+      tags:
+        - categorieLocales
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of categorieLocales
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/CategorieLocales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a categorieLocale
+      operationId: createCategorieLocales
+      tags:
+        - categorieLocales
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieLocales/{categorieLocaleId}:
+    get:
+      summary: Info for a specific categorieLocale
+      operationId: showCategorieLocaleById
+      tags:
+        - categorieLocales
+      parameters:
+        - name: categorieLocaleId
+          in: path
+          required: true
+          description: The id of the categorieLocale to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/CategorieLocales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeLocale38Details:
+    get:
+      summary: List all typeLocale38Details
+      operationId: listTypeLocale38Details
+      tags:
+        - typeLocale38Details
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of typeLocale38Details
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TypeLocale38Details'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a typeLocale38Detail
+      operationId: createTypeLocale38Details
+      tags:
+        - typeLocale38Details
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeLocale38Details/{typeLocale38DetailId}:
+    get:
+      summary: Info for a specific typeLocale38Detail
+      operationId: showTypeLocale38DetailById
+      tags:
+        - typeLocale38Details
+      parameters:
+        - name: typeLocale38DetailId
+          in: path
+          required: true
+          description: The id of the typeLocale38Detail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TypeLocale38Details'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /rues:
+    get:
+      summary: List all rues
+      operationId: listRues
+      tags:
+        - rues
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of rues
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Rues'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a rue
+      operationId: createRues
+      tags:
+        - rues
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /rues/{rueId}:
+    get:
+      summary: Info for a specific rue
+      operationId: showRueById
+      tags:
+        - rues
+      parameters:
+        - name: rueId
+          in: path
+          required: true
+          description: The id of the rue to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Rues'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /villes:
+    get:
+      summary: List all villes
+      operationId: listVilles
+      tags:
+        - villes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of villes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Villes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a ville
+      operationId: createVilles
+      tags:
+        - villes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /villes/{villeId}:
+    get:
+      summary: Info for a specific ville
+      operationId: showVilleById
+      tags:
+        - villes
+      parameters:
+        - name: villeId
+          in: path
+          required: true
+          description: The id of the ville to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Villes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardDeuxiemeNiveaus:
+    get:
+      summary: List all notificationRetardDeuxiemeNiveaus
+      operationId: listNotificationRetardDeuxiemeNiveaus
+      tags:
+        - notificationRetardDeuxiemeNiveaus
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notificationRetardDeuxiemeNiveaus
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/NotificationRetardDeuxiemeNiveaus'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notificationRetardDeuxiemeNiveau
+      operationId: createNotificationRetardDeuxiemeNiveaus
+      tags:
+        - notificationRetardDeuxiemeNiveaus
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardDeuxiemeNiveaus/{notificationRetardDeuxiemeNiveauId}:
+    get:
+      summary: Info for a specific notificationRetardDeuxiemeNiveau
+      operationId: showNotificationRetardDeuxiemeNiveauById
+      tags:
+        - notificationRetardDeuxiemeNiveaus
+      parameters:
+        - name: notificationRetardDeuxiemeNiveauId
+          in: path
+          required: true
+          description: The id of the notificationRetardDeuxiemeNiveau to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/NotificationRetardDeuxiemeNiveaus'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /locale38Details:
+    get:
+      summary: List all locale38Details
+      operationId: listLocale38Details
+      tags:
+        - locale38Details
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of locale38Details
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Locale38Details'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a locale38Detail
+      operationId: createLocale38Details
+      tags:
+        - locale38Details
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /locale38Details/{locale38DetailId}:
+    get:
+      summary: Info for a specific locale38Detail
+      operationId: showLocale38DetailById
+      tags:
+        - locale38Details
+      parameters:
+        - name: locale38DetailId
+          in: path
+          required: true
+          description: The id of the locale38Detail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Locale38Details'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardDeuxiemeNiveauDetails:
+    get:
+      summary: List all notificationRetardDeuxiemeNiveauDetails
+      operationId: listNotificationRetardDeuxiemeNiveauDetails
+      tags:
+        - notificationRetardDeuxiemeNiveauDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notificationRetardDeuxiemeNiveauDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/NotificationRetardDeuxiemeNiveauDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notificationRetardDeuxiemeNiveauDetail
+      operationId: createNotificationRetardDeuxiemeNiveauDetails
+      tags:
+        - notificationRetardDeuxiemeNiveauDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardDeuxiemeNiveauDetails/{notificationRetardDeuxiemeNiveauDetailId}:
+    get:
+      summary: Info for a specific notificationRetardDeuxiemeNiveauDetail
+      operationId: showNotificationRetardDeuxiemeNiveauDetailById
+      tags:
+        - notificationRetardDeuxiemeNiveauDetails
+      parameters:
+        - name: notificationRetardDeuxiemeNiveauDetailId
+          in: path
+          required: true
+          description: The id of the notificationRetardDeuxiemeNiveauDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/NotificationRetardDeuxiemeNiveauDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /secteurs:
+    get:
+      summary: List all secteurs
+      operationId: listSecteurs
+      tags:
+        - secteurs
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of secteurs
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Secteurs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a secteur
+      operationId: createSecteurs
+      tags:
+        - secteurs
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /secteurs/{secteurId}:
+    get:
+      summary: Info for a specific secteur
+      operationId: showSecteurById
+      tags:
+        - secteurs
+      parameters:
+        - name: secteurId
+          in: path
+          required: true
+          description: The id of the secteur to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Secteurs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxe38Details:
+    get:
+      summary: List all taxe38Details
+      operationId: listTaxe38Details
+      tags:
+        - taxe38Details
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taxe38Details
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Taxe38Details'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a taxe38Detail
+      operationId: createTaxe38Details
+      tags:
+        - taxe38Details
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxe38Details/{taxe38DetailId}:
+    get:
+      summary: Info for a specific taxe38Detail
+      operationId: showTaxe38DetailById
+      tags:
+        - taxe38Details
+      parameters:
+        - name: taxe38DetailId
+          in: path
+          required: true
+          description: The id of the taxe38Detail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Taxe38Details'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardPremierNiveaus:
+    get:
+      summary: List all notificationRetardPremierNiveaus
+      operationId: listNotificationRetardPremierNiveaus
+      tags:
+        - notificationRetardPremierNiveaus
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notificationRetardPremierNiveaus
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/NotificationRetardPremierNiveaus'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notificationRetardPremierNiveau
+      operationId: createNotificationRetardPremierNiveaus
+      tags:
+        - notificationRetardPremierNiveaus
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardPremierNiveaus/{notificationRetardPremierNiveauId}:
+    get:
+      summary: Info for a specific notificationRetardPremierNiveau
+      operationId: showNotificationRetardPremierNiveauById
+      tags:
+        - notificationRetardPremierNiveaus
+      parameters:
+        - name: notificationRetardPremierNiveauId
+          in: path
+          required: true
+          description: The id of the notificationRetardPremierNiveau to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/NotificationRetardPremierNiveaus'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /locales:
+    get:
+      summary: List all locales
+      operationId: listLocales
+      tags:
+        - locales
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of locales
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Locales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a locale
+      operationId: createLocales
+      tags:
+        - locales
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /locales/{localeId}:
+    get:
+      summary: Info for a specific locale
+      operationId: showLocaleById
+      tags:
+        - locales
+      parameters:
+        - name: localeId
+          in: path
+          required: true
+          description: The id of the locale to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Locales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /redevables:
+    get:
+      summary: List all redevables
+      operationId: listRedevables
+      tags:
+        - redevables
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of redevables
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Redevables'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a redevable
+      operationId: createRedevables
+      tags:
+        - redevables
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /redevables/{redevableId}:
+    get:
+      summary: Info for a specific redevable
+      operationId: showRedevableById
+      tags:
+        - redevables
+      parameters:
+        - name: redevableId
+          in: path
+          required: true
+          description: The id of the redevable to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Redevables'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxe38s:
+    get:
+      summary: List all taxe38s
+      operationId: listTaxe38s
+      tags:
+        - taxe38s
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taxe38s
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Taxe38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a taxe38
+      operationId: createTaxe38s
+      tags:
+        - taxe38s
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxe38s/{taxe38Id}:
+    get:
+      summary: Info for a specific taxe38
+      operationId: showTaxe38ById
+      tags:
+        - taxe38s
+      parameters:
+        - name: taxe38Id
+          in: path
+          required: true
+          description: The id of the taxe38 to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Taxe38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tauxTaxe38s:
+    get:
+      summary: List all tauxTaxe38s
+      operationId: listTauxTaxe38s
+      tags:
+        - tauxTaxe38s
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of tauxTaxe38s
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TauxTaxe38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a tauxTaxe38
+      operationId: createTauxTaxe38s
+      tags:
+        - tauxTaxe38s
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tauxTaxe38s/{tauxTaxe38Id}:
+    get:
+      summary: Info for a specific tauxTaxe38
+      operationId: showTauxTaxe38ById
+      tags:
+        - tauxTaxe38s
+      parameters:
+        - name: tauxTaxe38Id
+          in: path
+          required: true
+          description: The id of the tauxTaxe38 to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TauxTaxe38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardDeuxiemeNiveauDetailType38s:
+    get:
+      summary: List all notificationRetardDeuxiemeNiveauDetailType38s
+      operationId: listNotificationRetardDeuxiemeNiveauDetailType38s
+      tags:
+        - notificationRetardDeuxiemeNiveauDetailType38s
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notificationRetardDeuxiemeNiveauDetailType38s
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/NotificationRetardDeuxiemeNiveauDetailType38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notificationRetardDeuxiemeNiveauDetailType38
+      operationId: createNotificationRetardDeuxiemeNiveauDetailType38s
+      tags:
+        - notificationRetardDeuxiemeNiveauDetailType38s
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardDeuxiemeNiveauDetailType38s/{notificationRetardDeuxiemeNiveauDetailType38Id}:
+    get:
+      summary: Info for a specific notificationRetardDeuxiemeNiveauDetailType38
+      operationId: showNotificationRetardDeuxiemeNiveauDetailType38ById
+      tags:
+        - notificationRetardDeuxiemeNiveauDetailType38s
+      parameters:
+        - name: notificationRetardDeuxiemeNiveauDetailType38Id
+          in: path
+          required: true
+          description: The id of the notificationRetardDeuxiemeNiveauDetailType38 to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/NotificationRetardDeuxiemeNiveauDetailType38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /quartiers:
+    get:
+      summary: List all quartiers
+      operationId: listQuartiers
+      tags:
+        - quartiers
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of quartiers
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Quartiers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a quartier
+      operationId: createQuartiers
+      tags:
+        - quartiers
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /quartiers/{quartierId}:
+    get:
+      summary: Info for a specific quartier
+      operationId: showQuartierById
+      tags:
+        - quartiers
+      parameters:
+        - name: quartierId
+          in: path
+          required: true
+          description: The id of the quartier to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Quartiers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardTroisiemeNiveaus:
+    get:
+      summary: List all notificationRetardTroisiemeNiveaus
+      operationId: listNotificationRetardTroisiemeNiveaus
+      tags:
+        - notificationRetardTroisiemeNiveaus
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notificationRetardTroisiemeNiveaus
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/NotificationRetardTroisiemeNiveaus'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notificationRetardTroisiemeNiveau
+      operationId: createNotificationRetardTroisiemeNiveaus
+      tags:
+        - notificationRetardTroisiemeNiveaus
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationRetardTroisiemeNiveaus/{notificationRetardTroisiemeNiveauId}:
+    get:
+      summary: Info for a specific notificationRetardTroisiemeNiveau
+      operationId: showNotificationRetardTroisiemeNiveauById
+      tags:
+        - notificationRetardTroisiemeNiveaus
+      parameters:
+        - name: notificationRetardTroisiemeNiveauId
+          in: path
+          required: true
+          description: The id of the notificationRetardTroisiemeNiveau to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/NotificationRetardTroisiemeNiveaus'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  Trim:
+    type: "object"
+    required:
+      - id
+      - libelle
+      - numero
+    properties:
+      id:
+        type: int
+      libelle:
+        type: string
+      numero:
+        type: int
+  Trims:
+    type: array
+    items:
+      $ref: '#/definitions/Trim'
+  CategorieLocale:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  CategorieLocales:
+    type: array
+    items:
+      $ref: '#/definitions/CategorieLocale'
+  TypeLocale38Detail:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  TypeLocale38Details:
+    type: array
+    items:
+      $ref: '#/definitions/TypeLocale38Detail'
+  Rue:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Rues:
+    type: array
+    items:
+      $ref: '#/definitions/Rue'
+  Ville:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Villes:
+    type: array
+    items:
+      $ref: '#/definitions/Ville'
+  NotificationRetardDeuxiemeNiveau:
+    type: "object"
+    required:
+      - id
+      - code
+      - anne
+      - montantBase
+      - montantRetardPremierMois
+      - montantRetardAutreMois
+      - montantTotal
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      anne:
+        type: int
+      montantBase:
+        type: number
+      montantRetardPremierMois:
+        type: number
+      montantRetardAutreMois:
+        type: number
+      montantTotal:
+        type: number
+  NotificationRetardDeuxiemeNiveaus:
+    type: array
+    items:
+      $ref: '#/definitions/NotificationRetardDeuxiemeNiveau'
+  Locale38Detail:
+    type: "object"
+    required:
+      - id
+      - code
+      - superficie
+      - active
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      superficie:
+        type: number
+      active:
+        type: boolean
+  Locale38Details:
+    type: array
+    items:
+      $ref: '#/definitions/Locale38Detail'
+  NotificationRetardDeuxiemeNiveauDetail:
+    type: "object"
+    required:
+      - id
+      - code
+      - montantBase
+      - montantRetardPremierMois
+      - montantRetardAutreMois
+      - montantTotal
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      montantBase:
+        type: number
+      montantRetardPremierMois:
+        type: number
+      montantRetardAutreMois:
+        type: number
+      montantTotal:
+        type: number
+  NotificationRetardDeuxiemeNiveauDetails:
+    type: array
+    items:
+      $ref: '#/definitions/NotificationRetardDeuxiemeNiveauDetail'
+  Secteur:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Secteurs:
+    type: array
+    items:
+      $ref: '#/definitions/Secteur'
+  Taxe38Detail:
+    type: "object"
+    required:
+      - id
+      - code
+      - montantParMetreCarre
+      - montantBase
+      - montantRetardPremierMois
+      - montantRetardAutreMois
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      montantParMetreCarre:
+        type: number
+      montantBase:
+        type: number
+      montantRetardPremierMois:
+        type: number
+      montantRetardAutreMois:
+        type: number
+  Taxe38Details:
+    type: array
+    items:
+      $ref: '#/definitions/Taxe38Detail'
+  NotificationRetardPremierNiveau:
+    type: "object"
+    required:
+      - id
+      - code
+      - anne
+      - montantBase
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      anne:
+        type: int
+      montantBase:
+        type: number
+  NotificationRetardPremierNiveaus:
+    type: array
+    items:
+      $ref: '#/definitions/NotificationRetardPremierNiveau'
+  Locale:
+    type: "object"
+    required:
+      - id
+      - code
+      - complementAdresse
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      complementAdresse:
+        type: string
+  Locales:
+    type: array
+    items:
+      $ref: '#/definitions/Locale'
+  Redevable:
+    type: "object"
+    required:
+      - id
+      - cin
+      - credentialsNonExpired
+      - enabled
+      - accountNonExpired
+      - accountNonLocked
+      - passwordChanged
+      - username
+      - password
+    properties:
+      id:
+        type: int
+      cin:
+        type: string
+      credentialsNonExpired:
+        type: boolean
+      enabled:
+        type: boolean
+      accountNonExpired:
+        type: boolean
+      accountNonLocked:
+        type: boolean
+      passwordChanged:
+        type: boolean
+      username:
+        type: string
+      password:
+        type: string
+  Redevables:
+    type: array
+    items:
+      $ref: '#/definitions/Redevable'
+  Taxe38:
+    type: "object"
+    required:
+      - id
+      - code
+      - anne
+      - datePresentaion
+      - nombreMoisRetard
+      - montantBase
+      - montantRetardPremeirMois
+      - montantTotal
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      anne:
+        type: int
+      datePresentaion:
+        type: date
+      nombreMoisRetard:
+        type: int
+      montantBase:
+        type: number
+      montantRetardPremeirMois:
+        type: number
+      montantTotal:
+        type: number
+  Taxe38s:
+    type: array
+    items:
+      $ref: '#/definitions/Taxe38'
+  TauxTaxe38:
+    type: "object"
+    required:
+      - id
+      - code
+      - montantParMetreCarre
+      - dateMin
+      - dateMax
+      - pourcentagePremierRetard
+      - pourcentageAutreMoisRetard
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      montantParMetreCarre:
+        type: number
+      dateMin:
+        type: date
+      dateMax:
+        type: date
+      pourcentagePremierRetard:
+        type: number
+      pourcentageAutreMoisRetard:
+        type: number
+  TauxTaxe38s:
+    type: array
+    items:
+      $ref: '#/definitions/TauxTaxe38'
+  NotificationRetardDeuxiemeNiveauDetailType38:
+    type: "object"
+    required:
+      - id
+      - code
+      - montantBase
+      - montantRetardPremierMois
+      - montantRetardAutreMois
+      - montantTotal
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      montantBase:
+        type: number
+      montantRetardPremierMois:
+        type: number
+      montantRetardAutreMois:
+        type: number
+      montantTotal:
+        type: number
+  NotificationRetardDeuxiemeNiveauDetailType38s:
+    type: array
+    items:
+      $ref: '#/definitions/NotificationRetardDeuxiemeNiveauDetailType38'
+  Quartier:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Quartiers:
+    type: array
+    items:
+      $ref: '#/definitions/Quartier'
+  NotificationRetardTroisiemeNiveau:
+    type: "object"
+    required:
+      - id
+      - code
+      - anne
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      anne:
+        type: int
+  NotificationRetardTroisiemeNiveaus:
+    type: array
+    items:
+      $ref: '#/definitions/NotificationRetardTroisiemeNiveau'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string

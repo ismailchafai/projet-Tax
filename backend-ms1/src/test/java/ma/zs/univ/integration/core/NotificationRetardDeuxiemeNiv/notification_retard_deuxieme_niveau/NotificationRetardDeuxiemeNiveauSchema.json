@@ -1,0 +1,19 @@
+{
+    "code": "#string",
+    "locale": {"id": "#number"},
+    "redevable": {"id": "#number"},
+    "anne": "#number",
+    "montantBase": "#number",
+    "montantRetardPremierMois": "#number",
+    "montantRetardAutreMois": "#number",
+    "montantTotal": "#number"
+
+}
+
+
+
+
+
+
+
+

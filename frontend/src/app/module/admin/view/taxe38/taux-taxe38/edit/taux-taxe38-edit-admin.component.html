@@ -1,0 +1,88 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'tauxTaxe38.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'tauxTaxe38.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'tauxTaxe38.code' | translate}}<span style="color: red;">*</span></label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'tauxTaxe38.code' | translate}}" id="1" [(ngModel)]="item.code"
+                                                   [ngClass]="{'ng-invalid ng-dirty' : !validTauxTaxe38Code}"  />
+                                            <small class='p-error' *ngIf='!validTauxTaxe38Code'>Code est obligatoire.</small>
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="2">{{'tauxTaxe38.montantParMetreCarre' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'tauxTaxe38.montantParMetreCarre' | translate}}" [(ngModel)]="item.montantParMetreCarre"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'tauxTaxe38.dateMin' | translate}}</label>
+                                            <p-calendar appendTo="body" id="3"  [showTime]="true" [showSeconds]="false" placeholder="{{'tauxTaxe38.dateMin' | translate}}"  [(ngModel)]="item.dateMin"
+                                                        dateFormat="{{dateFormat}}"  >
+                                            </p-calendar>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="4">{{'tauxTaxe38.dateMax' | translate}}</label>
+                                            <p-calendar appendTo="body" id="4"  [showTime]="true" [showSeconds]="false" placeholder="{{'tauxTaxe38.dateMax' | translate}}"  [(ngModel)]="item.dateMax"
+                                                        dateFormat="{{dateFormat}}"  >
+                                            </p-calendar>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="5">{{'tauxTaxe38.pourcentagePremierRetard' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="5" placeholder="{{'tauxTaxe38.pourcentagePremierRetard' | translate}}" [(ngModel)]="item.pourcentagePremierRetard"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="6">{{'tauxTaxe38.pourcentageAutreMoisRetard' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="6" placeholder="{{'tauxTaxe38.pourcentageAutreMoisRetard' | translate}}" [(ngModel)]="item.pourcentageAutreMoisRetard"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="7">{{'tauxTaxe38.typeLocale38Detail' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="typeLocale38Details" [(ngModel)]="item.typeLocale38Detail" id="7" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'tauxTaxe38.typeLocale38Detail' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="8">{{'tauxTaxe38.categorieLocale' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="categorieLocales" [(ngModel)]="item.categorieLocale" id="8" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'tauxTaxe38.categorieLocale' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>
